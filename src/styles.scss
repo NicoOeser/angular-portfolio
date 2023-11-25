@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Syne', sans-serif;
+    src: url('./assets/fonts/syne/static/Syne-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Overpass', sans-serif;
+    src: url('./assets/fonts/overpass/static/Overpass-Regular.ttf');
+}
+
+.wrapper {
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: #FFFCF3;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #FFFCF3;
+}
+
+*::-webkit-scrollbar-corner {
+    background-color: transparent; 
+}

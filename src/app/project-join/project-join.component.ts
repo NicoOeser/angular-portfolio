@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-project-join',
   templateUrl: './project-join.component.html',
-  styleUrl: './project-join.component.scss'
+  styleUrls: ['./project-join.component.scss']
 })
 export class ProjectJoinComponent {
 

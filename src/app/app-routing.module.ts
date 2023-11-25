@@ -6,7 +6,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { NavComponent } from './nav/nav.component';
+import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
 import { ContactComponent } from './contact/contact.component';
 
 
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
   { path: 'skills', component: MySkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'navigation', component: NavComponent },
+  { path: 'navigation', component: BurgerMenuComponent },
   { path: 'contact', component: ContactComponent },
 ];
 

@@ -1,0 +1,17 @@
+<section *ngIf="this.menuService.MenuGlobal" class="burgerMenu">
+    <a (click)="goTo('#aboutMe')" href="#aboutMe">
+        <img src="assets/img/Rectangle 7.svg" alt="">
+        <div class="bar"></div>
+        <h1>About me</h1>
+    </a>
+    <a (click)="goTo('#mySkills')" href="#mySkills">
+        <img src="assets/img/Rectangle 7.svg" alt="">
+        <div class="bar"></div>
+        <h1>My skills</h1>
+    </a>
+    <a (click)="goTo('#portfolio')" href="#portfolio">
+        <img src="assets/img/Rectangle 7.svg" alt="">
+        <div class="bar"></div>
+        <h1>Portfolio</h1>
+    </a>
+</section>

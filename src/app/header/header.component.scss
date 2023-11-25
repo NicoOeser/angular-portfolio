@@ -1,0 +1,86 @@
+.header-section {
+    background-color: #FFFCF3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 9;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 92px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+
+    img {
+        height: 80px;
+        width: auto;
+        transition: 0.2s;
+        opacity: 1;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+
+.burgerMenuOff {
+    cursor: pointer;
+    animation: transformBurgerBack 0.2s ease;
+    background-image: url("../../assets/img/burger menu S3.svg");
+    background-size: contain;
+    width: 40px;
+    height: 32px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 125ms ease;
+    }
+  }
+
+.burgerMenuOn {
+  cursor: pointer;
+  animation: transformBurger 0.2s ease;
+  background-image: url("../../assets/img/Property 1=Variant5.svg");
+  background-size: contain;
+  width: 40px;
+  height: 32px;
+}
+
+@keyframes transformBurger {
+  25% {
+    background-image: url("../../assets/img/Property 1=Transition.svg");
+  }
+  50% {
+    background-image: url("../../assets/img/Property 1=Variant3.svg");
+  }
+  75% {
+    background-image: url("../../assets/img/Property 1=Variant4.svg");
+  }
+  100% {
+    background-image: url("../../assets/img/Property 1=Variant5.svg");
+  }
+}
+
+@keyframes transformBurgerBack {
+  25% {
+    background-image: url("../../assets/img/Property 1=Variant6.svg");
+  }
+  50% {
+    background-image: url("../../assets/img/Property 1=Variant7.svg");
+  }
+  75% {
+    background-image: url("../../assets/img/Property 1=Variant8.svg");
+  }
+  100% {
+    background-image: url("../../assets/img/burger menu S3.svg");
+  }
+}

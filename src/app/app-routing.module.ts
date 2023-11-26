@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '', component: MainpageComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
   { path: 'about-me', component: AboutMeComponent },
-  { path: 'skills', component: MySkillsComponent },
+  { path: 'my-skills', component: MySkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'navigation', component: BurgerMenuComponent },
   { path: 'contact', component: ContactComponent },

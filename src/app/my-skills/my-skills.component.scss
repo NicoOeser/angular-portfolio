@@ -1,0 +1,126 @@
+
+.skills-container {
+    border: 4px solid black;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.skills-header {
+    font-size: 78px;
+    font-weight: 800;
+    font-family: Syne;
+    margin-bottom: -40px;
+    background-color: rgb(255, 252, 243);
+
+    transition: 0.2s;
+
+    position: absolute;
+    top: -50px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &:hover {
+        cursor: default;
+        color: #00BC8F;
+    }
+}
+
+
+.icons-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 100px;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.first-row {
+    display: flex;
+    gap: 140px;
+}
+
+
+.second-row {
+    display: flex;
+    gap: 140px;
+}
+
+.icon {
+    font-family: 'Overpass';
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    transition: 0.2s;
+
+
+    &:hover {
+        color: #00BC8F;
+        
+        .icon-picture{
+            animation: horsin-around 0.3s ease-in-out;
+        }
+
+    }
+}
+
+.icon-name {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.icon-picture{
+    transition: 0.2s;
+}
+
+.arrow-container{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+  
+    img {
+      height: 215px;
+      right: 10%;
+      top: 4%;
+      rotate: -45deg;
+  
+      &:hover {
+        transform: translateY(45%);
+        transition: 500ms ease;
+      }
+    }
+  }
+
+.mobile-row {
+    display: none;
+}
+
+@keyframes horsin-around {
+    20% {
+      transform: translateX(40%);
+    }
+    40% {
+      transform: translateX(50%) scale(0.9);
+    }
+    60% {
+      transform: translateX(-50%) scale(0.9);
+    }
+    80% {
+      transform: translateX(-40%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

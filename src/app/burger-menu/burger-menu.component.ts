@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { MenuService } from '../menu.service';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-burger-menu',
@@ -9,15 +10,10 @@ import { MenuService } from '../menu.service';
 
 export class BurgerMenuComponent {
 
-  constructor(public menuService: MenuService) {
-  }
+  constructor( private router: Router, private sharedService: SharedService) {}
 
-  goTo(id: string) {
-    this.menuService.MenuGlobal = !this.menuService.MenuGlobal
-    setTimeout(() => {
-       window.location.href = id
-    }, 1000);
-   
+  toggleHamburger(){
+    this.sharedService.toggleHamburgerState();
   }
 
 }

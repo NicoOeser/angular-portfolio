@@ -5,7 +5,11 @@
             <img src="assets/logo/LogoBlack.png" alt="logo">
         </div>
   
-        <div (click)="toggleDisplayMenu()" [class.burgerMenuOn]="this.menuService.MenuGlobal" [class.burgerMenuOff]="!this.menuService.MenuGlobal"></div>
+        <div>
+            <button class="hamburger" [class.is-active]="isHamburgerActive" (click)="toggleNavigation()">
+                <div class="bar"></div>
+            </button>
+        </div>
 
     </div>
 </div>

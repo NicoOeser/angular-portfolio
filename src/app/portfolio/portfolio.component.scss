@@ -1,0 +1,24 @@
+.portfolio-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .portfolio-header {
+        font-family: Syne;
+        font-size: 78px;
+        transition: 0.2s;
+
+        &:hover {
+            color:  #00BC8F;
+            cursor: default;
+        }
+    }
+
+    .portfolio-notice {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 27.6px;
+        font-family: 'Overpass';     
+        cursor: default;
+    }
+}

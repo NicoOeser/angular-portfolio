@@ -1,84 +1,85 @@
-.burgerMenu {
-    padding: 0 ;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: -140px;
- 
-  
-    a {
-      position: relative;
-      color: black;
-      text-decoration: none;
-      overflow: hidden;
-  
-      &:hover {
-        img {
-          animation: fadeOut 250ms ease;
-          opacity: 0;
-        }
-  
-        .bar {
-          transform: translateX(70%);
-          animation: slideIn 0.3s forwards;
-        }
-      }
-  
-      h1 {
-        font-weight: 600;
-        font-size: 96px;
-        margin: 0;
-        padding: 30px 46px;
-        font-family: 'Syne', sans-serif;
-      }
-  
-      img {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-      }
-  
-      .bar {
-        transform: translateX(-100%);
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: black;
-        height: 4px;
-        width: 100%;
-      }
+.content {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  position: relative;
+  width: 45px;
+  cursor: pointer;
+  z-index: 2;
+  appearance: none;
+  background: none;
+  outline: none;
+  transition: 0.2s;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(75, 75, 75);
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+@media (max-width: 730px) {
+  .header {
+    img {
+      height: 45px;
     }
   }
-  
-  @keyframes fadeOut {
-      from {
-          opacity: 1;
-      } to {
-          opacity: 0;
-      }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: calc(100vh - 380px);
+  gap: 128px;
+
+  .navigation-link {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 96px;
+    text-decoration: none;
+    color: black;
+    opacity: 1;
+    transition: 0.2s;
+    border-bottom: 4px solid transparent;
+
+    &:hover {
+     
+      cursor: pointer;
+      border-left: 4px solid  #00BC8F;
+      border-bottom: 4px solid  #00BC8F;
+    }
+
   }
-  
-  @keyframes slideIn {
-    10% {
-      transform: translateX(-60%);
-    }
-    20% {
-      transform: translateX(-40%);
-    }
-    30% {
-      transform: translateX(-20%);
-    }
-    40% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(20%);
-    }
-    60% {
-      transform: translateX(40%);
-    }
-    70% {
-      transform: translateX(70%);
-    }
-  }
+}
+

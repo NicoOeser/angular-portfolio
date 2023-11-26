@@ -31,56 +31,50 @@
     }
 }
 
+.navigation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
 
-.burgerMenuOff {
-    cursor: pointer;
-    animation: transformBurgerBack 0.2s ease;
-    background-image: url("../../assets/img/burger menu S3.svg");
-    background-size: contain;
-    width: 40px;
-    height: 32px;
-
-    &:hover {
-      transform: scale(1.1);
-      transition: 125ms ease;
-    }
-  }
-
-.burgerMenuOn {
+.hamburger {
+  position: relative;
+  width: 45px;
   cursor: pointer;
-  animation: transformBurger 0.2s ease;
-  background-image: url("../../assets/img/Property 1=Variant5.svg");
-  background-size: contain;
-  width: 40px;
-  height: 32px;
+  z-index: 2;
+  appearance: none;
+  background: none;
+  outline: none;
+  transition: 0.2s;
+  opacity: 1;
+  padding: 0;
+  border: none;
 }
 
-@keyframes transformBurger {
-  25% {
-    background-image: url("../../assets/img/Property 1=Transition.svg");
-  }
-  50% {
-    background-image: url("../../assets/img/Property 1=Variant3.svg");
-  }
-  75% {
-    background-image: url("../../assets/img/Property 1=Variant4.svg");
-  }
-  100% {
-    background-image: url("../../assets/img/Property 1=Variant5.svg");
-  }
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(75, 75, 75);
+  margin: 6px 0px;
+  transition: 0.4s;
 }
-
-@keyframes transformBurgerBack {
-  25% {
-    background-image: url("../../assets/img/Property 1=Variant6.svg");
-  }
-  50% {
-    background-image: url("../../assets/img/Property 1=Variant7.svg");
-  }
-  75% {
-    background-image: url("../../assets/img/Property 1=Variant8.svg");
-  }
-  100% {
-    background-image: url("../../assets/img/burger menu S3.svg");
-  }
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+.hamburger.is-active .bar {
+  opacity: 0;
 }

@@ -1,0 +1,189 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+  }
+  
+  .project-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100vw;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 100px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 225ms ease-in-out;
+    border: 3px solid transparent;
+    filter: grayscale(100%);
+  
+    .arrow-down {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 75px;
+      width: 75px;
+      right: -15px;
+      top: 122px;
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      transition: all 225ms ease-in-out;
+      transform: rotate(90deg);
+    }
+  }
+  
+  .project-image-container::before {
+    content: "";
+    position: absolute;
+    border: 3px solid transparent;
+    opacity: 0;
+    z-index: 1;
+    transition: all 225ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .project-image {
+    height: 380px;
+    width: 570px;
+    z-index: 0;
+    border: 3px solid black;
+  }
+  
+  .project-container:hover .project-image-container::before {
+    opacity: 1;
+    border: 3px solid black;
+    top: 25px;
+    left: -25px;
+    right: 25px;
+    bottom: -25px;
+  }
+  
+  .project-container:hover .project-description .project-number {
+    color: #00BC8F;
+    transition: color 225ms ease 225ms; // Smooth transition with a delay of 1 second
+  }
+  
+  .project-container:hover .project-image-container {
+    filter: none;
+  }
+  
+  .project-container:hover .arrow-down {
+    opacity: 1;
+    position: absolute;
+    left: -62px;
+    top: 170px;
+    transform: rotate(260deg);
+  }
+  
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    width: 570px;
+    flex-basis: 50%;
+    position: relative;
+    z-index: -10;
+    top: 0;
+    right: -550px;
+    opacity: 0;
+    transition: right 225ms ease 225ms, opacity 225ms ease;
+    cursor: default;
+    &.show {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  
+  .project-number {
+    display: flex;
+    justify-content: start;
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 50px;
+  }
+  
+  .number-container-small-screen {
+    display: none;
+    font-weight: 700;
+    font-size: 48px;
+    padding-bottom: 20px;
+  
+    @media (max-width: 1050px) {
+      display: flex;
+    }
+  }
+  
+  .project-tools {
+    font-family: 'Overpass';
+    color: #00BC8F;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .project-title {
+    font-family: 'Syne';
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .project-short-description {
+    font-size: 16px;
+    font-family: 'Overpass';
+  }
+  
+  .button-container {
+    width: 270px;
+    gap: 24px;
+    display: flex;
+  }
+  
+  .button {
+    border: 4px solid black;
+    padding: 15px 50px;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Overpass';
+    transition: padding 0.2s, font-weight 0.2s;
+    background-color: #FFFCF3;
+  
+    &:hover{
+        cursor: pointer;
+        padding: 15px 80px;
+        font-weight: bold;
+    }
+  }
+
+  .arrow-container{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      height: 215px;
+      right: 10%;
+      top: 4%;
+      rotate: 45deg;
+  
+      &:hover {
+        transform: translateY(45%);
+        transition: 500ms ease;
+      }
+    }
+  }

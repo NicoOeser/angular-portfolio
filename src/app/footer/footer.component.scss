@@ -1,0 +1,72 @@
+.content {
+    background-color: black;
+    height: 200px;
+    display: flex;
+}
+
+
+.logo-and-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    .my-logo {
+        height: 80px;
+        width: auto;
+        transition: 0.2s;
+        opacity: 1;
+        &:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+
+    .copyright {
+        color: white;
+        font-family: 'Overpass';
+        font-size: 23px;
+        font-weight: 400;
+        cursor: default;
+    }
+}
+
+.social-media-and-legal-notice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+
+    .social-media-container {
+        display: flex;
+        vertical-align: middle;
+        gap: 32px;
+    }
+
+    .legal-notice{
+        font-family: 'Overpass';
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        opacity: 1;
+        transition: 0.2s;
+        &:hover{
+            border-bottom: 2px solid  #00BC8F;
+            font-weight: bold
+        }
+    }
+}
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-icon {
+    transition: 0.2s;
+    &:hover {
+        transform: translateY(-10px);
+    }
+}

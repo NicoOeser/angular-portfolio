@@ -40,3 +40,92 @@ body {
 *::-webkit-scrollbar-corner {
     background-color: transparent; 
 }
+
+@media (max-width: 1050px) {
+    .wrapper {
+        max-width: 800px !important;
+        margin: auto;
+    }
+
+    .component-header {
+        font-size: 68px !important;
+    }
+}
+
+
+@media (max-width: 880px) {
+    .wrapper {
+        max-width: 650px !important;
+        margin: auto;
+    }
+
+    .component-header {
+        font-size: 58px !important;
+    }
+}
+
+@media (max-width: 730px) {
+    .wrapper {
+        max-width: 550px !important;
+        margin: auto;
+    }
+
+    .component-header {
+        font-size: 48px !important;
+    }
+
+    .arrow-picture {
+        height: 200px;
+    }
+}
+
+@media (max-width: 580px) {
+    .wrapper {
+        max-width: 450px !important;
+        margin: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        max-width: 380px !important;
+        margin: auto;
+    }
+
+    .component-header {
+        font-size: 38px !important;
+    }
+
+    .arrow-picture {
+        height: 160px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        max-width: 320px !important;
+        margin: auto;
+    }
+
+    .component-header {
+        font-size: 36px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .arrow-picture {
+        height: 140px;
+    }
+}
+
+@media (max-width: 360px) {
+    .wrapper {
+        max-width: 280px !important;
+        margin: auto;
+    }
+
+    .component-header {
+        font-size: 32px !important;
+    }
+}

@@ -111,7 +111,7 @@
   
   .project-number {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     font-family: 'Overpass';
     font-weight: 700;
     font-size: 32px;
@@ -170,4 +170,111 @@
     }
   }
 
+  @media (max-width: 1280px) {
+    .project-image {
+      height: 340px;
+      width: 450px;
+    }
+  
+    .project-title {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width:1050px) {
+    .project-container {
+      max-width: 460px !important;
+      margin: 0 auto;
+      gap: 50px;
+      overflow: hidden;
+  
+      .project-number {
+        display: none;
+      }
+  
+      .arrow-down {
+        display: none;
+      }
+  
+      .project-image-container {
+        filter: none;
+      }
+  
+      .project-description {
+        left: unset;
+        text-align: center;
+      }
+  
+      
+  
+      .project-container:hover .project-image-container::before {
+        opacity: 0;
+        /* Die Border-Regel beim Hover deaktivieren */
+      }
+  
+      .project-image-container::before {
+        border: unset !important;
+      }
+    }
+  
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      /* Center the .project-list horizontally */
+    }
+  
+    .project-description {
+      position: relative !important;
+      right: 0 !important;
+      transition: none !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
+      width: unset;
+      align-items: center;
+  
+      .number-container {
+        display: none;
+      }
+  
+      .button-container {
+        justify-content: center;
+      }
+    }
+  }
+  
+  @media (max-width:480px) {
+    .project-image {
+      height: 280px;
+      max-width: 360px;
+    }
+  
+    .project-description{
+      max-width: 360px;
+    }
+  
+    .project-title{
+      font-size: 26px;
+    }
+    .project-tools{
+      font-size: 18px;
+    }
+    .button{
+      padding: 5px 25px;
+    }
+    .project-container{
+      gap: 25px;
+    }
+  }
+  
+  @media (max-width:400px) {
+    .project-image {
+      height: 200px;
+      max-width: 280px;
+    }
+  
+    .project-description{
+      max-width: 280px;
+    }
+  }
 

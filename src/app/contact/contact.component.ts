@@ -43,6 +43,7 @@ enableFormFields() {
   this.sendButon.nativeElement.disabled = false;
 }
 
+
 async sendMail() {
   this.disableFormFields();
 
@@ -62,6 +63,7 @@ async sendMail() {
     this.successMessage = 'Your email has been sent successfully!';
     this.hideSuccessMessageAfterDelay();
     this.enableFormFields();
+
   } catch (error) {
     console.error('Fehler beim Senden der Nachricht:', error);
     this.successMessage = 'Your email could not be sent';

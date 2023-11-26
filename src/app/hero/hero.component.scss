@@ -92,3 +92,150 @@
         top: 100%;
     }
 }
+
+@media (max-width: 1280px) {
+
+    .pofession {
+        font-size: 100px;
+
+        img {
+            width: 300px;
+            height: 3px;
+        }
+
+        .name {
+            font-size: 40px;
+        }
+    }
+
+    .scroll-notice {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .pofession {
+        font-size: 80px;
+
+        img {
+            width: 200px;
+            height: 3px;
+        }
+
+        .name {
+            font-size: 32px;
+        }
+    }
+
+    .scroll-notice {
+        max-width: 800px;
+
+        .email {
+            font-size: 20px;
+        }
+
+        .scroll-notice {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+
+    .pofession {
+        font-size: 60px;
+
+        img {
+            width: 150px;
+            height: 3px;
+        }
+
+        .name {
+            font-size: 24px;
+        }
+    }
+
+    .scroll-notice {
+        max-width: 650px;
+
+        .scroll-down{
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+
+    .pofession {
+        font-size: 50px;
+
+        img {
+            width: 130px;
+            height: 3px;
+        }
+
+        .name {
+            font-size: 24px;
+        }
+    }
+
+    .scroll-notice {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 580px) {
+    .scroll-notice {
+        max-width: 450px;
+    }
+
+    .email {
+        font-size: 16px !important;
+        }
+    .scroll-string{
+        font-size: 16px !important;
+    }
+        .scroll-notice {
+            font-size: 16px !important;
+        }
+}
+
+@media (max-width: 480px) {
+
+    .pofession {
+        font-size: 40px;
+
+        img {
+            width: 100px;
+            height: 3px;
+        }
+
+        .name {
+            font-size: 20px;
+        }
+    }
+
+    .scroll-notice {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 400px) {
+    .pofession {
+        font-size: 30px;
+
+        img {
+            width: 60px;
+            height: 3px;
+        }
+
+        .name {
+            font-size: 18px;
+        }
+    }
+
+    .scroll-notice {
+        max-width: 280px;
+    }
+}

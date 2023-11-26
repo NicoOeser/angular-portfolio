@@ -1,9 +1,8 @@
 .content {
     background-color: black;
-    height: 200px;
+    height: 300px;
     display: flex;
 }
-
 
 .logo-and-copyright {
     display: flex;
@@ -69,4 +68,28 @@
     &:hover {
         transform: translateY(-10px);
     }
+}
+
+@media (max-width: 730px) {
+    .logo-and-copyright{
+
+        .my-logo{
+            height: 45px;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+   .space-between{
+    flex-direction: column;
+    gap: 64px;
+   }
+
+   .logo-and-copyright{
+    align-items: center;
+   }
+
+   .social-media-and-legal-notice{
+    align-items: center;
+   }
 }

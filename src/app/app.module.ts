@@ -18,6 +18,7 @@ import { ProjectElPolloLocoComponent } from './project-el-pollo-loco/project-el-
 import { ProjectPortfolioComponent } from './project-portfolio/project-portfolio.component';
 import { ProjectPokedexComponent } from './project-pokedex/project-pokedex.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -42,6 +43,7 @@ const routes: Routes = [
     ProjectPortfolioComponent,
     FooterComponent,
     LegalNoticeComponent,
+    PrivacyPolicyComponent,
     ProjectPokedexComponent,
     MainpageComponent,
   ],

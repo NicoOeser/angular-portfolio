@@ -63,12 +63,9 @@
                     
                     <div class="inputfield-container-checkbox">
                         <label>
-                            <input class="checkbox" type="checkbox" formControlName="privacyPolicyAgreement">
-                            <span class="text-before-link">I've read the </span>
-                            <a routerLink="privacy-policy">privacy policy</a>
-                            <span class="text-after-link"> and agree to the processing of my data as outlined.</span>
+                            <input type="checkbox" formControlName="privacyPolicyAgreement">
+                            I've read the <a routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
                         </label>
-                        
                         <span *ngIf="messageForm.get('privacyPolicyAgreement')?.hasError('required') && 
                             (messageForm.get('privacyPolicyAgreement')?.dirty || 
                             messageForm.get('privacyPolicyAgreement')?.touched || isSubmitted)" class="error">

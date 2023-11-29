@@ -1,34 +1,34 @@
 .header-section {
-    background-color: #FFFCF3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    z-index: 9;
+  background-color: #FFFCF3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 9;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 92px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 92px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
 
-    img {
-        height: 80px;
-        width: auto;
-        transition: 0.2s;
-        opacity: 1;
+  img {
+    height: 80px;
+    width: auto;
+    transition: 0.2s;
+    opacity: 1;
 
-        &:hover {
-            cursor: pointer;
-        }
+    &:hover {
+      cursor: pointer;
     }
+  }
 }
 
 .navigation-overlay {
@@ -69,13 +69,15 @@
   margin: 6px 0px;
   transition: 0.4s;
 }
+
 .hamburger.is-active:before {
   transform: rotate(-45deg) translate(-8px, 6px);
 }
+
 .hamburger.is-active:after {
   transform: rotate(45deg) translate(-9px, -8px);
 }
+
 .hamburger.is-active .bar {
   opacity: 0;
 }
-

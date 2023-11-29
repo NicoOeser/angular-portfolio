@@ -1,35 +1,24 @@
 <div class="content wrapper">
-
-    <div class="project-container wrapper" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
-  
-      <div class="project-image-container" #aboutmeLeft>
-        <div class="number-container-small-screen">02/04</div>
-        <img class="project-image" src="./assets/img/mywork/ElPoloLoco.png">
-        <img class="arrow-down" src="./assets/img/project-arrow.png" alt="">
-      </div>
-  
-  
-      <div class="project-description" [ngClass]="{'show': isDescriptionVisible(0)}">
-  
-        <div class="project-number">02/04</div>
-  
-        <h3 class="project-title">El Pollo Loco</h3>
-  
-        <span class="project-tools">Javascript | HTML | CSS</span>
-  
-        <span class="project-short-description">Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.</span>
-  
-        <div class="button-container">
-          <button class="button" (click)="navigateTo('https://com')">
-            Live
-          </button>
-  
-          <button class="button" (click)="navigateTo('https://github.com/NicoOeser/el-pollo-loco')">
-            Github
-          </button>
-        </div>
-  
-  
+  <div class="project-container wrapper" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
+    <div class="project-image-container" #aboutmeLeft>
+      <div class="number-container-small-screen">02/04</div>
+      <img class="project-image" src="./assets/img/mywork/ElPoloLoco.png">
+      <img class="arrow-down" src="./assets/img/arrows/projectArrow.png" alt="">
+    </div>
+    <div class="project-description" [ngClass]="{'show': isDescriptionVisible(0)}">
+      <div class="project-number">02/04</div>
+      <h3 class="project-title">El Pollo Loco</h3>
+      <span class="project-tools">Javascript | HTML | CSS</span>
+      <span class="project-short-description">Jump, run and throw game based on object-oriented approach. Help Pepe to
+        find coins and tabasco salsa to fight against the crazy hen.</span>
+      <div class="button-container">
+        <button class="button" (click)="navigateTo('https://com')">
+          Live
+        </button>
+        <button class="button" (click)="navigateTo('https://github.com/NicoOeser/el-pollo-loco')">
+          Github
+        </button>
       </div>
     </div>
   </div>
+</div>

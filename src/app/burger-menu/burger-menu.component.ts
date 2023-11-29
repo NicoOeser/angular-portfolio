@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
 
@@ -10,9 +10,9 @@ import { SharedService } from '../shared.service';
 
 export class BurgerMenuComponent {
 
-  constructor( private router: Router, private sharedService: SharedService) {}
+  constructor(private router: Router, private sharedService: SharedService) { }
 
-  toggleHamburger(){
+  toggleHamburger() {
     this.sharedService.toggleHamburgerState();
   }
 

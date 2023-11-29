@@ -23,10 +23,8 @@ export class HeaderComponent {
   toggleNavigation() {
     this.sharedService.toggleHamburgerState();
     if (this.isHamburgerActive) {
-      console.log('Hamburger is active');
       this.router.navigate(['navigation']);
     } else {
-      console.log('Hamburger is not active');
       this.router.navigate(['']);
     }
   }

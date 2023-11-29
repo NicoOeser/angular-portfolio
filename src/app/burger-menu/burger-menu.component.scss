@@ -74,58 +74,56 @@
     border-bottom: 4px solid transparent;
 
     &:hover {
-     
       cursor: pointer;
-      border-left: 4px solid  #00BC8F;
-      border-bottom: 4px solid  #00BC8F;
+      border-left: 4px solid #00BC8F;
+      border-bottom: 4px solid #00BC8F;
     }
 
   }
 }
 
-
 @media (max-width: 1280px) {
-  .navigation-link{
-      font-size: 86px !important;
+  .navigation-link {
+    font-size: 86px !important;
   }
 }
 
 @media (max-width: 1050px) {
-  .navigation-link{
-      font-size: 76px !important;
+  .navigation-link {
+    font-size: 76px !important;
   }
 
-  .navigation{
-      gap: 100px !important;
+  .navigation {
+    gap: 100px !important;
   }
 }
 
 @media (max-width: 880px) {
-  .navigation-link{
-      font-size: 66px !important;
+  .navigation-link {
+    font-size: 66px !important;
   }
 }
 
 @media (max-width: 730px) {
-  .navigation-link{
-      font-size: 56px !important;
+  .navigation-link {
+    font-size: 56px !important;
   }
 }
 
 @media (max-width: 580px) {
-  .navigation-link{
-      font-size: 46px !important;
+  .navigation-link {
+    font-size: 46px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .navigation-link{
-      font-size: 36px !important;
+  .navigation-link {
+    font-size: 36px !important;
   }
 }
 
 @media (max-width: 400px) {
-  .navigation-link{
-      font-size: 26px !important;
+  .navigation-link {
+    font-size: 26px !important;
   }
 }

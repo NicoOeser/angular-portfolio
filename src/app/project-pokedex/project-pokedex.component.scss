@@ -77,7 +77,7 @@
   
   .project-container:hover .project-description .project-number {
     color: #00BC8F;
-    transition: color 225ms ease 225ms; // Smooth transition with a delay of 1 second
+    transition: color 225ms ease 225ms;
   }
   
   .project-container:hover .project-image-container {
@@ -209,7 +209,6 @@
   
       .project-container:hover .project-image-container::before {
         opacity: 0;
-        /* Die Border-Regel beim Hover deaktivieren */
       }
   
       .project-image-container::before {
@@ -221,7 +220,6 @@
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      /* Center the .project-list horizontally */
     }
   
     .project-description {

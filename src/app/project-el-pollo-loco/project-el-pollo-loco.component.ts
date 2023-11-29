@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AfterViewInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { ElementRef, Renderer2, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-project-el-pollo-loco',
@@ -15,21 +15,17 @@ export class ProjectElPolloLocoComponent {
 
   constructor(private renderer: Renderer2) {}
   
-  // An array to keep track of the hovered state for each project
   hoveredStates: boolean[] = [];
 
   showDescription(index: number) {
-    // Set the hovered state for the project at the given index to true
     this.hoveredStates[index] = true;
   }
 
   hideDescription(index: number) {
-    // Set the hovered state for the project at the given index to false
     this.hoveredStates[index] = false;
   }
 
   isDescriptionVisible(index: number): boolean {
-    // Check if the description should be visible for the project at the given index
     return this.hoveredStates[index] || false;
   }
 
@@ -51,13 +47,13 @@ export class ProjectElPolloLocoComponent {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          this.isVisible = true; // Set the flag to true
+          this.isVisible = true;
           if (this.state !== 'unnormal') {
-            this.state = 'unnormal'; // Change the state to 'unnormal' only if it's not already set
+            this.state = 'unnormal'; 
           }
         } else {
           if (!this.isVisible) {
-            this.state = 'normal'; // If not visible, reset the state only if the flag is false
+            this.state = 'normal'; 
           }
         }
       });

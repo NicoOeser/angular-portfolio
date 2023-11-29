@@ -1,17 +1,13 @@
 <div class="content">
     <div class="contact-container wrapper">
         <h2 class="contact-header component-header">Say Hi!</h2>
-
         <div class="contact-formular-background wrapper">
-
             <div class="contact-formular-container">
-
                 <div class="contact-formular-header">
                     <span class="discuss-project">Want to discuss a new project?</span>
                     <span class="discuss-ideas">Say hello! let's discuss your ideas and make it happen</span>
                 </div>
                 <form method="post" class="contact-formular" #myForm [formGroup]="messageForm" (ngSubmit)="sendMail()">
-
                     <div class="inputfield-container">
                         <input class="inputfield" required type="text" placeholder="Your name" name="name" #nameField
                             formControlName="name" [class.invalid]="
@@ -23,10 +19,9 @@
                          messageForm.get('name')?.hasError('required') && 
                          (messageForm.get('name')?.dirty || 
                          messageForm.get('name')?.touched || isSubmitted)" class="error">
-                           Your name is required
+                            Your name is required
                         </span>
                     </div>
-
                     <div class="inputfield-container">
                         <input class="inputfield" required type="email" placeholder="Your email" name="email"
                             #emailField formControlName="email" [class.invalid]="
@@ -46,7 +41,6 @@
                             Please enter a valid email
                         </span>
                     </div>
-
                     <div class="inputfield-container">
                         <textarea class="text" required type="text" placeholder="Your message" name="message"
                             #messageField formControlName="message" [class.invalid]="
@@ -60,11 +54,11 @@
                             Your message is empty
                         </span>
                     </div>
-                    
                     <div class="inputfield-container-checkbox">
                         <label>
                             <input type="checkbox" formControlName="privacyPolicyAgreement">
-                            I've read the <a routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
+                            I've read the <a routerLink="privacy-policy">privacy policy</a> and agree to the processing
+                            of my data as outlined.
                         </label>
                         <span *ngIf="messageForm.get('privacyPolicyAgreement')?.hasError('required') && 
                             (messageForm.get('privacyPolicyAgreement')?.dirty || 
@@ -72,10 +66,6 @@
                             Please agree to the privacy policy
                         </span>
                     </div>
-                    
-                   
-                      
-
                     <div>
                         <button class="button" #sendButton [disabled]="canSendMail()">Send message</button>
                     </div>
@@ -83,6 +73,5 @@
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
 </div>
-

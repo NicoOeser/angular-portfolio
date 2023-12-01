@@ -205,8 +205,6 @@
         text-align: center;
       }
   
-      
-  
       .project-container:hover .project-image-container::before {
         opacity: 0;
       }
@@ -259,6 +257,9 @@
     }
     .button{
       padding: 5px 25px;
+      &:hover{
+        padding: 5px 40px;
+      }
     }
     .project-container{
       gap: 25px;
@@ -270,7 +271,7 @@
       height: 200px;
       max-width: 280px;
     }
-  
+
     .project-description{
       max-width: 280px;
     }

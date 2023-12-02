@@ -54,8 +54,11 @@ export class ContactComponent {
 
     try {
       await fetch('https://formspree.io/f/mpzgevdq', {
-        method: 'post',
-        body: fd
+        method: 'POST',
+        body: fd,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
 
@@ -78,6 +81,6 @@ export class ContactComponent {
   hideSuccessMessageAfterDelay() {
     setTimeout(() => {
       this.successMessage = '';
-    }, 5000);
+    }, 10000);
   }
 }

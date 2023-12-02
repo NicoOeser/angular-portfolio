@@ -286,6 +286,13 @@ input[type="checkbox"]:checked+label::before {
     .discuss-ideas {
         font-size: 20px !important;
     }
+    
+    .button{
+        padding: 5px 25px;
+        &:hover{
+          padding: 5px 40px;
+        }
+      }
 }
 
 @media (max-width: 400px) {

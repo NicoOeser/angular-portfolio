@@ -42,10 +42,10 @@
 
 }
 
-.about-me-picture {
-    height: 500px;
+.about-me-container {
+    height: 600px;
     width: 500px;
-    object-fit: cover;
+    background-size: cover;
 }
 
 .lets-talk-button {
@@ -112,8 +112,8 @@
     }
 
     .about-me-picture {
-        height: 450px;
-        width: 360px;
+        height: 480px;
+        width: 310px;
     }
 }
 
@@ -134,7 +134,7 @@
 
     .about-me-picture {
         height: 400px;
-        width: 330px;
+        width: 260px;
     }
 
     .about-me-content {
@@ -162,6 +162,6 @@
 
     .about-me-picture {
         height: 360px;
-        width: 260px;
+        width: 240px;
     }
 }

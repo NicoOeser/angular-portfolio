@@ -17,6 +17,7 @@ export class ContactComponent {
     privacyPolicyAgreement: [false, Validators.requiredTrue]
   })
 
+  isButtonHidden = false;
   isSubmitted = false;
   successMessage = '';
 
@@ -46,12 +47,13 @@ export class ContactComponent {
 
   async sendMail() {
     this.disableFormFields();
-
+    this.isButtonHidden = true;
+  
     let fd = new FormData();
     fd.append('name', this.nameField.nativeElement.value);
     fd.append('email', this.emailField.nativeElement.value);
     fd.append('message', this.messageField.nativeElement.value);
-
+  
     try {
       await fetch('https://formspree.io/f/mpzgevdq', {
         method: 'POST',
@@ -60,20 +62,20 @@ export class ContactComponent {
           'Accept': 'application/json'
         }
       });
-
-
+  
       this.myForm.nativeElement.reset();
       this.successMessage = 'Your email has been sent successfully!';
       this.hideSuccessMessageAfterDelay();
-      this.enableFormFields();
-
     } catch (error) {
       this.successMessage = 'Your email could not be sent';
       this.hideSuccessMessageAfterDelay();
       this.myForm.nativeElement.reset();
+    } finally {
       this.enableFormFields();
     }
   }
+  
+
   canSendMail() {
     return this.messageForm.invalid;
   }
@@ -81,6 +83,7 @@ export class ContactComponent {
   hideSuccessMessageAfterDelay() {
     setTimeout(() => {
       this.successMessage = '';
-    }, 10000);
+      this.isButtonHidden = false;
+    }, 9000);
   }
 }

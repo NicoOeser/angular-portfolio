@@ -68,7 +68,7 @@
                         </span>
                     </div>
                     <div>
-                        <button class="button" #sendButton [disabled]="canSendMail()">Send message</button>
+                        <button class="button" #sendButton [disabled]="canSendMail()" [class.hidden]="isButtonHidden">Send message</button>
                     </div>
                     <span *ngIf="successMessage" class="success-message">{{ successMessage }}</span>
                 </form>

@@ -9,7 +9,7 @@
 }
 
 .wrapper {
-    max-width: 1240px;
+    max-width: 1440px;
     width: 100%;
     margin: auto;
 }
@@ -41,6 +41,13 @@ body {
     background-color: transparent;
 }
 
+@media (max-width: 1300px) {
+    .wrapper {
+        max-width: 1240px !important;
+        margin: auto;
+    }
+}
+
 @media (max-width: 1050px) {
     .wrapper {
         max-width: 800px !important;
@@ -55,7 +62,7 @@ body {
 
 @media (max-width: 880px) {
     .wrapper {
-        max-width: 650px !important;
+        max-width: 730px !important;
         margin: auto;
     }
 
@@ -66,7 +73,7 @@ body {
 
 @media (max-width: 730px) {
     .wrapper {
-        max-width: 550px !important;
+        max-width: 650px !important;
         margin: auto;
     }
 

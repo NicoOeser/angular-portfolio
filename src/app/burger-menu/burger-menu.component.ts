@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-burger-menu',
@@ -10,7 +11,12 @@ import { SharedService } from '../shared.service';
 
 export class BurgerMenuComponent {
 
-  constructor(private router: Router, private sharedService: SharedService) { }
+  constructor(private router: Router, private sharedService: SharedService, private translate: TranslateService) { }
+
+  getTranslatedText(key: string): string {
+    let translation = this.translate.instant(key);
+    return translation !== key ? translation : null;
+  }
 
   toggleHamburger() {
     this.sharedService.toggleHamburgerState();

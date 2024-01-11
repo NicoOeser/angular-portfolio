@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -7,5 +7,11 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./my-skills.component.scss']
 })
 export class MySkillsComponent {
+  constructor(private translate: TranslateService) {}
 
+  getTranslatedText(key: string): string {
+    let translation = this.translate.instant(key);
+    return translation !== key ? translation : null;
+  }
 }
+

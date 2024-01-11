@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-hero',
@@ -7,5 +8,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
+  constructor(private translate: TranslateService) {}
 
+  getTranslatedText(key: string): string {
+    let translation = this.translate.instant(key);
+    return translation !== key ? translation : null;
+  }
 }

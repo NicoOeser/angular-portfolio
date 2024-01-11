@@ -1,20 +1,19 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-join',
   templateUrl: './project-join.component.html',
   styleUrls: ['./project-join.component.scss']
 })
-
 export class ProjectJoinComponent implements AfterViewInit {
   state = 'normal';
   isVisible = false;
 
   @ViewChild('aboutmeLeft', { static: true }) aboutmeLeft: ElementRef | undefined;
 
-  constructor(private renderer: Renderer2) {}
-  
+  constructor(private renderer: Renderer2, private translate: TranslateService) {}
+
   hoveredStates: boolean[] = [];
 
   showDescription(index: number) {
@@ -63,4 +62,9 @@ export class ProjectJoinComponent implements AfterViewInit {
       observer.observe(this.aboutmeLeft.nativeElement);
     }
   }
+
+  getTranslatedText(key: string): string {
+    return this.translate.instant(key);
+  }
 }
+

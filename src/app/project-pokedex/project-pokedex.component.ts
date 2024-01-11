@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ElementRef, Renderer2, ViewChild } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-pokedex',
@@ -8,63 +8,64 @@ import { ElementRef, Renderer2, ViewChild } from '@angular/core';
   styleUrls: ['./project-pokedex.component.scss']
 })
 export class ProjectPokedexComponent { 
-state = 'normal';
-isVisible = false;
+  state = 'normal';
+  isVisible = false;
 
-@ViewChild('aboutmeLeft', { static: true }) aboutmeLeft: ElementRef | undefined;
+  @ViewChild('aboutmeLeft', { static: true }) aboutmeLeft: ElementRef | undefined;
 
-constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private translate: TranslateService) {}
 
-hoveredStates: boolean[] = [];
+  hoveredStates: boolean[] = [];
 
-showDescription(index: number) {
-  this.hoveredStates[index] = true;
-}
+  showDescription(index: number) {
+    this.hoveredStates[index] = true;
+  }
 
-hideDescription(index: number) {
+  hideDescription(index: number) {
+    this.hoveredStates[index] = false;
+  }
 
-  this.hoveredStates[index] = false;
-}
+  isDescriptionVisible(index: number): boolean {
+    return this.hoveredStates[index] || false;
+  }
 
-isDescriptionVisible(index: number): boolean {
+  navigateTo(url: string): void {
+    window.open(url, '_blank');
+  }
 
-  return this.hoveredStates[index] || false;
-}
+  ngAfterViewInit() {
+    this.observeVisibility();
+  }
 
-navigateTo(url: string): void {
-  window.open(url, '_blank');
-}
+  observeVisibility() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
 
-ngAfterViewInit() {
-  this.observeVisibility();
-}
-
-observeVisibility() {
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        this.isVisible = true; 
-        if (this.state !== 'unnormal') {
-          this.state = 'unnormal'; 
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.isVisible = true; 
+          if (this.state !== 'unnormal') {
+            this.state = 'unnormal'; 
+          }
+        } else {
+          if (!this.isVisible) {
+            this.state = 'normal'; 
+          }
         }
-      } else {
-        if (!this.isVisible) {
-          this.state = 'normal'; 
-        }
-      }
-    });
-  }, options);
+      });
+    }, options);
 
-  if (this.aboutmeLeft) {
-    observer.observe(this.aboutmeLeft.nativeElement);
+    if (this.aboutmeLeft) {
+      observer.observe(this.aboutmeLeft.nativeElement);
+    }
+  }
+
+  getTranslatedText(key: string): string {
+    return this.translate.instant(key);
   }
 }
-}
-
 

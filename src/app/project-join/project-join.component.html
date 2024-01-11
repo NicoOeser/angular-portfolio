@@ -3,24 +3,22 @@
     <div class="project-container wrapper" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
       <div class="project-image-container" #aboutmeLeft>
         <div class="number-container-small-screen">
-          01/03
+          {{ getTranslatedText('PROJECT_JOIN_NUMBER') }}
         </div>
         <img class="project-image" src="./assets/img/mywork/Join.png">
         <img class="arrow-down" src="./assets/img/arrows/projectArrow.png" alt="">
       </div>
       <div [ngClass]="{'show': isDescriptionVisible(0)}" class="project-description">
-        <div class="project-number">01/03</div>
-        <h3 class="project-title">Join</h3>
-        <span class="project-tools"> Javascript | HTML | CSS </span>
-        <span class="project-short-description">Task Manager inspired by the Kanban System. Create and organize tasks
-          using drag and drop functions, assign
-          users and categories.</span>
+        <div class="project-number">{{ getTranslatedText('PROJECT_JOIN_NUMBER') }}</div>
+        <h3 class="project-title">{{ getTranslatedText('PROJECT_JOIN_TITLE') }}</h3>
+        <span class="project-tools">{{ getTranslatedText('PROJECT_JOIN_TOOLS') }}</span>
+        <span class="project-short-description">{{ getTranslatedText('PROJECT_JOIN_DESCRIPTION') }}</span>
         <div class="button-container">
           <button class="button" (click)="navigateTo('https://join.nicolas-oeser.de')">
-            Live
+            {{ getTranslatedText('PROJECT_JOIN_LIVE') }}
           </button>
           <button class="button" (click)="navigateTo('https://github.com/NicoOeser/Join')">
-            Github
+            {{ getTranslatedText('PROJECT_JOIN_GITHUB') }}
           </button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +22,7 @@ export class ContactComponent {
   successMessage = '';
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private translate: TranslateService) { }
 
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -85,5 +85,10 @@ export class ContactComponent {
       this.successMessage = '';
       this.isButtonHidden = false;
     }, 9000);
+  }
+
+  getTranslatedText(key: string): string {
+    let translation = this.translate.instant(key);
+    return translation !== key ? translation : null;
   }
 }

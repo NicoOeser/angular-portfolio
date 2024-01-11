@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,5 +7,11 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+  constructor(private translate: TranslateService) {}
 
+  getTranslatedText(key: string): string {
+    let translation = this.translate.instant(key);
+    return translation !== key ? translation : null;
+  }
 }
+

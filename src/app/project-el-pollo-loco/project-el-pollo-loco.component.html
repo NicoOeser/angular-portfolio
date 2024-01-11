@@ -1,22 +1,21 @@
 <div class="content wrapper">
   <div class="project-container wrapper" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
     <div class="project-image-container" #aboutmeLeft>
-      <div class="number-container-small-screen">02/03</div>
+      <div class="number-container-small-screen">{{ getTranslatedText('PROJECT_EL_POLLO_LOCO_NUMBER') }}</div>
       <img class="project-image" src="./assets/img/mywork/ElPoloLoco.png">
       <img class="arrow-down" src="./assets/img/arrows/projectArrow.png" alt="">
     </div>
     <div class="project-description" [ngClass]="{'show': isDescriptionVisible(0)}">
-      <div class="project-number">02/03</div>
-      <h3 class="project-title">El Pollo Loco</h3>
-      <span class="project-tools">Javascript | HTML | CSS</span>
-      <span class="project-short-description">Jump, run and throw game based on object-oriented approach. Help Pepe to
-        find coins and tabasco salsa to fight against the crazy hen.</span>
+      <div class="project-number">{{ getTranslatedText('PROJECT_EL_POLLO_LOCO_NUMBER') }}</div>
+      <h3 class="project-title">{{ getTranslatedText('PROJECT_EL_POLLO_LOCO_TITLE') }}</h3>
+      <span class="project-tools">{{ getTranslatedText('PROJECT_EL_POLLO_LOCO_TOOLS') }}</span>
+      <span class="project-short-description">{{ getTranslatedText('PROJECT_EL_POLLO_LOCO_DESCRIPTION') }}</span>
       <div class="button-container">
         <button class="button" (click)="navigateTo('https://el-pollo-loco.nicolas-oeser.de')">
-          Live
+          {{ getTranslatedText('PROJECT_EL_POLLO_LOCO_LIVE') }}
         </button>
         <button class="button" (click)="navigateTo('https://github.com/NicoOeser/el-pollo-loco')">
-          Github
+          {{ getTranslatedText('PROJECT_EL_POLLO_LOCO_GITHUB') }}
         </button>
       </div>
     </div>

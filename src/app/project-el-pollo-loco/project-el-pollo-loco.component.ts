@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ElementRef, Renderer2, ViewChild } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-el-pollo-loco',
@@ -13,7 +13,7 @@ export class ProjectElPolloLocoComponent {
 
   @ViewChild('aboutmeLeft', { static: true }) aboutmeLeft: ElementRef | undefined;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private translate: TranslateService) {}
   
   hoveredStates: boolean[] = [];
 
@@ -64,4 +64,7 @@ export class ProjectElPolloLocoComponent {
     }
   }
 
+  getTranslatedText(key: string): string {
+    return this.translate.instant(key);
+  }
 }

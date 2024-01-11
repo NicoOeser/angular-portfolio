@@ -1,21 +1,14 @@
 <div class="wrapper content" id="about-me">
-    <h2 class="about-me-header component-header">About me</h2>
+    <h2 class="about-me-header component-header">{{ getTranslatedText('ABOUT_ME_HEADER') }}</h2>
     <div class="about-me-content">
         <div class="about-me-text-container">
             <div class="about-me-text">
-                <p>I am a highly motivated, German-speaking Junior Frontend Developer from Eitorf (North Rhine-Westphalia).
-                    <br>
-                    <br>
-                    I focus on careful planning, clean code and thorough documentation to ensure high quality work. 
-                    Teamwork and a strong work ethic come naturally to me. 
-                    The ability to quickly learn new tasks and find solutions to problems complements  my profile.
-                    <br>
-                    <br>
-                    If you think I'd be a good match for your projects, contact me!
-                </p>
+                <p>{{ getTranslatedText('ABOUT_ME_TEXT') }}</p>
             </div>
             <div class="lets-talk-button-container">
-                <button class="lets-talk-button" routerLink="" fragment="contact">Let's talk</button>
+                <button class="lets-talk-button" routerLink="" fragment="contact">
+                    {{ getTranslatedText('LETS_TALK_BUTTON') }}
+                </button>
             </div>
         </div>
         <div class="about-me-picture-container">
@@ -28,4 +21,5 @@
 <div class="arrow-container wrapper">
     <img class="arrow-picture" src="assets/img/arrows/arrow.png" alt="">
 </div>
+
 

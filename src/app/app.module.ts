@@ -19,7 +19,13 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+export function HttpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 const routes: Routes = [
   { path: 'about-me', component: AboutMeComponent },
@@ -56,7 +62,17 @@ const routes: Routes = [
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
       scrollOffset: [0, 128] // [x, y]
-    })
+    }),
+    HttpClientModule,
+    TranslateModule.forRoot(
+      {
+      loader:{
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps:[HttpClient]
+      }
+    }
+    )
   ],
 
   providers: [],

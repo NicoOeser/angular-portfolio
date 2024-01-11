@@ -3,6 +3,10 @@
         <div routerLink="">
             <img src="assets/logo/LogoBlack.png" alt="logo">
         </div>
+        <div class="btn-container">
+            <button class="btn-language" (click)="switchLanguage('de')">DE</button>
+            <button class="btn-language" (click)="switchLanguage('en')">EN</button>
+        </div>
         <div>
             <button class="hamburger" [class.is-active]="isHamburgerActive" (click)="toggleNavigation()">
                 <div class="bar"></div>

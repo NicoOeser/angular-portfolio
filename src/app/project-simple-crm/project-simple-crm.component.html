@@ -1,0 +1,23 @@
+<div class="content wrapper">
+    <div class="project-container wrapper" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
+      <div class="project-image-container" #aboutmeLeft>
+        <div class="number-container-small-screen">{{ getTranslatedText('PROJECT_SIMPLE_CRM_NUMBER') }}</div>
+        <img class="project-image" src="./assets/img/mywork/simple-crm.png">
+        <img class="arrow-down" src="./assets/img/arrows/projectArrow.png" alt="">
+      </div>
+      <div class="project-description" [ngClass]="{'show': isDescriptionVisible(0)}">
+        <div class="project-number">{{ getTranslatedText('PROJECT_SIMPLE_CRM_NUMBER') }}</div>
+        <h3 class="project-title">{{ getTranslatedText('PROJECT_SIMPLE_CRM_TITLE') }}</h3>
+        <span class="project-tools">{{ getTranslatedText('PROJECT_SIMPLE_CRM_TOOLS') }}</span>
+        <span class="project-short-description">{{ getTranslatedText('PROJECT_SIMPLE_CRM_DESCRIPTION') }}</span>
+        <div class="button-container">
+          <button class="button" (click)="navigateTo('https://simple-crm.nicolas-oeser.de')">
+            {{ getTranslatedText('PROJECT_SIMPLE_CRM_LIVE') }}
+          </button>
+          <button class="button" (click)="navigateTo('https://github.com/NicoOeser/simple-crm')">
+            {{ getTranslatedText('PROJECT_SIMPLE_CRM_GITHUB') }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ProjectSimpleCrmComponent } from './project-simple-crm/project-simple-crm.component';
 
 export function HttpLoaderFactory(http:HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,6 +51,7 @@ const routes: Routes = [
     LegalNoticeComponent,
     PrivacyPolicyComponent,
     MainpageComponent,
+    ProjectSimpleCrmComponent,
   ],
 
   imports: [

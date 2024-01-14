@@ -37,7 +37,6 @@
   font-weight: bold;
   font-family: 'Overpass';
   background-color: rgb(255, 252, 243);
-  margin-right: 16px;
   border: none;
   
   &:hover {
@@ -45,6 +44,11 @@
       color: #00BC8F;
       font-weight: bold;
   }
+}
+
+.btn-span {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .navigation-overlay {
